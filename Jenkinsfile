@@ -44,12 +44,5 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            mail to: 'developer@example.com',
-                 subject: "Pipeline Status: ${currentBuild.currentResult}",
-                 body: "Pipeline has finished. Status: ${currentBuild.currentResult}",
-                 attachLog: true
-        }
-    }
+   
 }
